@@ -11,10 +11,10 @@ export class PersonaService {
   constructor(private http: HttpClient) {}
 
   save(p: Persona): Observable<any[]> {
-    return this.http.post<any>("http://localhost:8080/persona/add", p);
+    return this.http.post<any>("http://40.121.45.164:8080/persona/add", p);
   }
 
   list(): Observable<any[]> {
-    return this.http.get<any[]>("http://localhost:8080/persona/list");
+    return this.http.get<any[]>("http://40.121.45.164:8080/persona/list");
   }
 }
